@@ -47,6 +47,13 @@ app.use((err, req, res, next) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send({
+    activeStatus: true,
+    error: false,
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is now running on port ${PORT}`);
 });
